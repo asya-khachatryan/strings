@@ -1,4 +1,5 @@
-import java.io.*;
+import Utils.StringUtil;
+
 import java.util.*;
 
 public class StringDemo {
@@ -8,15 +9,8 @@ public class StringDemo {
         String a = sc.nextLine();
         String b = sc.nextLine();
 
-        String lex;
-        if (a.compareTo(b) > 0) {
-            lex = "Yes";
-        } else {
-            lex = "No";
-        }
-
         System.out.println(a.length() + b.length());
-        System.out.println(lex);
+        System.out.println(StringUtil.order(a,b));
         System.out.println(StringUtil.capitalize(a) + " " + StringUtil.capitalize(b));
     }
 }

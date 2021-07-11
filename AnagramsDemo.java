@@ -1,4 +1,5 @@
-import java.io.*;
+import Utils.AnagramsUtil;
+
 import java.util.*;
 
 public class AnagramsDemo {
@@ -12,13 +13,10 @@ public class AnagramsDemo {
         char[] arr1 = a.toCharArray();
         char[] arr2 = b.toCharArray();
 
-        SortingUtil.insertionSort(arr1);
-        SortingUtil.quickSort(arr2, 0, arr2.length - 1);
+        AnagramsUtil.insertionSort(arr1);
+        AnagramsUtil.quickSort(arr2, 0, arr2.length - 1);
 
-        if (Arrays.equals(arr1, arr2)) {
-            System.out.println("Anagrams");
-        } else {
-            System.out.println("Not Anagrams");
-        }
+        System.out.println(AnagramsUtil.anagrams(arr1, arr2));
+
     }
 }
