@@ -1,4 +1,3 @@
-import utils.AnagramsUtil;
 import utils.SortingUtil;
 import utils.StringUtil;
 
@@ -12,20 +11,18 @@ public class StringDemo {
         String b = sc.nextLine();
 
         System.out.println(a.length() + b.length());
-        System.out.println(StringUtil.order(a,b));
+        System.out.println(StringUtil.compare(a,b));
         System.out.println(StringUtil.capitalize(a) + " " + StringUtil.capitalize(b));
 
 
         String c = sc.nextLine().toLowerCase();
         String d = sc.nextLine().toLowerCase();
 
-        char[] arr1 = c.toCharArray();
-        char[] arr2 = d.toCharArray();
-
-        SortingUtil.insertionSort(arr1);
-        SortingUtil.quickSort(arr2, 0, arr2.length - 1);
-
-        System.out.println(AnagramsUtil.anagrams(arr1, arr2));
+        if (StringUtil.areAnagrams(c, d)){
+            System.out.println("Anagrams");
+        } else {
+            System.out.println("Not Anagrams");
+        }
 
     }
 }
