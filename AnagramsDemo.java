@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Anagrams {
+public class AnagramsDemo {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -12,14 +12,13 @@ public class Anagrams {
         char[] arr1 = a.toCharArray();
         char[] arr2 = b.toCharArray();
 
-        Arrays.sort(arr1);
-        Arrays.sort(arr2);
+        SortingUtil.insertionSort(arr1);
+        SortingUtil.quickSort(arr2, 0, arr2.length - 1);
 
-        if (Arrays.equals(arr1, arr2)){
+        if (Arrays.equals(arr1, arr2)) {
             System.out.println("Anagrams");
-        } else{
+        } else {
             System.out.println("Not Anagrams");
         }
-
     }
 }
