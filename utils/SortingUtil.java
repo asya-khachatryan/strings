@@ -1,10 +1,8 @@
-package Utils;
+package utils;
 
-import java.util.Arrays;
+public class SortingUtil {
 
-public class AnagramsUtil {
-
-    private AnagramsUtil() {
+    private SortingUtil() {
     }
 
     public static void insertionSort(char[] arr) {
@@ -46,13 +44,5 @@ public class AnagramsUtil {
         char temp = arr[first];
         arr[first] = arr[second];
         arr[second] = temp;
-    }
-
-    public static String anagrams(char[] a, char[] b) {
-        if (Arrays.equals(a, b)) {
-            return "Anagrams";
-        } else {
-            return "Not Anagrams";
-        }
     }
 }
