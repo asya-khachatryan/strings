@@ -11,14 +11,14 @@ public class StringDemo {
         String b = sc.nextLine();
 
         System.out.println(a.length() + b.length());
-        System.out.println(StringUtil.compare(a,b));
+        System.out.println(StringUtil.compare(a, b));
         System.out.println(StringUtil.capitalize(a) + " " + StringUtil.capitalize(b));
 
 
-        String c = sc.nextLine().toLowerCase();
-        String d = sc.nextLine().toLowerCase();
+        String c = sc.nextLine();
+        String d = sc.nextLine();
 
-        if (StringUtil.areAnagrams(c, d)){
+        if (StringUtil.areAnagramsCaseIgnored(c, d)) {
             System.out.println("Anagrams");
         } else {
             System.out.println("Not Anagrams");

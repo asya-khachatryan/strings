@@ -7,7 +7,7 @@ public class StringUtil {
         return s.substring(0, 1).toUpperCase() + s.substring(1);
     }
 
-    public static String compare (String a, String b){
+    public static String compare(String a, String b) {
         if (a.compareTo(b) > 0) {
             return "Yes";
         } else {
@@ -15,9 +15,9 @@ public class StringUtil {
         }
     }
 
-    public static boolean areAnagrams(String s1, String s2) {
-        char[] arr1 = s1.toCharArray();
-        char[] arr2 = s2.toCharArray();
+    public static boolean areAnagramsCaseIgnored(String s1, String s2) {
+        char[] arr1 = s1.toLowerCase().toCharArray();
+        char[] arr2 = s2.toLowerCase().toCharArray();
 
         SortingUtil.insertionSort(arr1);
         SortingUtil.quickSort(arr2, 0, arr2.length - 1);
